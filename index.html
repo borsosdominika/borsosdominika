@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Borsos Dominika – Harmonikaművész</title>
+
+    <!-- Keresőoptimalizálás (SEO) -->
+    <meta name="description"
+        content="Borsos Dominika hivatalos oldala – harmonikaművész, koncertek, galéria, média, kapcsolatfelvétel.">
+    <meta name="keywords"
+        content="Borsos Dominika, harmonikaművész, harmonika, koncert, klasszikus zene, zenész, előadó, fellépés, zeneakadémia, komolyzene, magyar harmonikaművész, hangszeres előadó, kamarazene, zeneművészet, zenei események, élőzene, művész, zenetanár, klasszikus harmonika, harmonika koncert, zenei előadás, művésznő, művészi fellépés, magyar zenész, művészeti előadás, harmonikaművésznő, accordionist, accordion, accordion concert, classical accordion, classical music, musician, music artist, performer, live music, live performance, chamber music, music academy, Hungarian accordionist, concert, classical performer, stage performance, artist, accordion teacher, music events, Akkordeonistin, Akkordeon, Akkordeonkonzert, klassische Musik, Musikerin, Musikaufführung, Konzert, ungarische Akkordeonistin, klassische Akkordeonmusik, Musiker, Musiklehrerin, Musikveranstaltungen, Kammermusik, Bühnenauftritt, Musikakademie, Künstlerin">
+    <meta name="author" content="Borsos Dominika">
+
+    <!-- Robots (keresőrobot irányítás) -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Social media előnézet (Open Graph Facebook, Messenger, LinkedIn) -->
+    <meta property="og:title" content="Borsos Dominika – Harmonikaművész">
+    <meta property="og:description"
+        content="Fedezze fel Borsos Dominika harmonikaművész világát – koncertek, képek, videók, elérhetőség.">
+    <meta property="og:image" content="https://dominikahonlap.hu/thumbnail.jpg">
+    <meta property="og:url" content="https://dominikahonlap.hu">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter kártya -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Borsos Dominika – Harmonikaművész">
+    <meta name="twitter:description"
+        content="Fedezze fel Borsos Dominika harmonikaművész világát – koncertek, képek, videók, elérhetőség.">
+    <meta name="twitter:image" content="https://dominikahonlap.hu/thumbnail.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://dominikahonlap.hu/favicon.png" type="image/png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css_hl/fotok.css">
+    <link rel="stylesheet" href="../css_hl/navsav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- JS -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <!--
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borsos Dominika</title>
+    <link rel="icon" href="../img/logo_nevnelkul.png">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    -->
+
+</head>
+
+<body>
+    <nav class="navigaciossav transparent">
+        <div class="nav-container">
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+
+            <ul class="nav-left desktop-only">
+                <li><a href="#bev">Kezdőlap</a></li>
+                <li><a href="./html/bemutatkozas.html">Bemutatkozás</a></li>
+                <li><a href="#esemenyek">Események</a></li>
+            </ul>
+
+
+            <div class="logo-center">
+                <img src="./img/logo_nevnelkul.png" alt="Logó" class="logo">
+            </div>
+
+
+            <ul class="nav-right desktop-only">
+                <li class="dropdown">
+                    <a href="">Média</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./html/fotok.html">Fotók</a></li>
+                        <li><a href="./html/videok.html">Videók</a></li>
+                        <li><a href="./html/audio.html">Audió</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#kapcsolat">Kapcsolat</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./html/uzenet.html">Üzenet</a></li>
+                        <li><a href="#hirlevel">Hírlevél</a></li>
+                        <li><a href="#kapcsolat">Elérhetőség</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="">Partnerek</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./html/zenei_paletta.html">Zenei paletta</a></li>
+                        <li><a href="./html/egyuttmukodesek.html">Intézmények</a></li>
+                        <li><a href="./html/egyuttmukodesek.html">Együttműködések</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+
+            <ul class="mobile-menu" id="mobile-menu">
+                <li><a href="#bev">Kezdőlap</a></li>
+
+                <!-- Bemutatkozás a főoldal másik lapjára mutat, nem kell almenü -->
+                <li><a href="./html/bemutatkozas.html">Bemutatkozás</a></li>
+
+                <li><a href="#esemenyek">Események</a></li>
+
+                <!-- Galéria lenyíló -->
+                <li class="has-submenu">
+                    <button class="submenu-toggle">Média</button>
+                    <ul class="submenu">
+                        <li><a href="./html/fotok.html">Fotók</a></li>
+                        <li><a href="./html/videok.html">Videók</a></li>
+                        <li><a href="./html/audio.html">Audio</a></li>
+                    </ul>
+                </li>
+
+                <!-- Kapcsolat lenyíló -->
+                <li class="has-submenu">
+                    <button class="submenu-toggle">Kapcsolat</button>
+                    <ul class="submenu">
+                        <li><a href="./html/uzenet.html">Üzenet</a></li>
+                        <li><a href="#hirlevel">Hírlevél</a></li>
+                        <li><a href="#kapcsolat">Elérhetőség</a></li>
+                    </ul>
+                </li>
+
+                <!-- Partnerek lenyíló -->
+                <li class="has-submenu">
+                    <button class="submenu-toggle">Partnerek</button>
+                    <ul class="submenu">
+                        <li><a href="./html/zenei_paletta.html">Zenei paletta</a></li>
+                        <li><a href="./html/egyuttmukodesek.html">intézmények</a></li>
+                        <li><a href="./html/egyuttmukodesek.html">Együttműködések</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+
+    <div class="container-fluid" id="bev">
+        <div class="row">
+            <div class="hero-image">
+                <img src="./img/logo_meret.png" class="kozepre-kep" alt="">
+            </div>
+        </div>
+        <div class="row elvalaszto"></div>
+        <div class="row szlogo">
+            <div class="szlogo-kepes">
+                <hr>
+                <img src="./img/logo_meret másolata.png" class="szlogologo" alt="">
+                <p>Merüljön el a zene csodálatos világában, és legyen részese a harmonika sokszínűségének köszönhetően
+                    egy különleges koncertnek. <br>
+                    Változatos programkínálat, hogy az élmény minden pillanata emlékezetes maradjon.
+                </p>
+                <p>Francia sanzonok, pezsdítő musettek- Olasz dolce vita- Hangulatos jazz standerdek- sváb dallamok-
+                    klasszikus zene. </p>
+                <h4>„Ambassador of quality music” </h4>
+                <!--  <img src="hossz.png" class="hossz" alt="">-->
+            </div>
+            <p id="esemenyek"></p>
+        </div>
+        <div class="hangjegyes-elvalaszto">
+            <span class="violinkulcs">&#119070;</span>
+        </div>
+
+
+
+        <div class="esemeny-szekcio-wrapper row" id="esemenyek">
+            <h2 class="esemeny-cim">Események</h2>
+            <div class="esemeny-trioszekcio">
+                <div class="esemeny-oldal bal-oldal">
+                    <ul class="esemeny-lista">
+                        <li>
+                            <h4>Bródy koncert</h4>
+                            <p><strong>2025. július 02.</strong></p>
+                            <p>Szeged</p>
+
+                        </li>
+                        <li>
+                            <h4>Golden Lake Resort</h4>
+                            <p><strong>2025. július 11.</strong></p>
+                            <p>Golden Lake Resort, Balatonfüred</p>
+
+                        </li>
+                        <li>
+                            <h4>Bródy koncert</h4>
+                            <p><strong>2025. július 13.</strong></p>
+                            <p>Tokaj</p>
+                        </li>
+                        <li>
+                            <h4>Karolina kávéház</h4>
+                            <p><strong>2025. július 16.</strong></p>
+                            <p>Karolina kávéház, Balatonfüred</p>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="esemeny-kozep"></div>
+
+                <div class="esemeny-oldal jobb-oldal">
+                    <ul class="esemeny-lista">
+                        <li>
+                            <h4>Sváb zenei dallamok</h4>
+                            <p><strong>2025. július 18.</strong></p>
+                            <p> Veszprém</p>
+
+                        </li>
+                        <li>
+                            <h4>Bródy koncert</h4>
+                            <p><strong>2025. július 25.</strong></p>
+                            <p>Siófok</p>
+
+                        </li>
+                        <li>
+                            <h4>Golden Lake Resort</h4>
+                            <p><strong>2025. július 26.</strong></p>
+                            <p>Golden Lake Resort, Balatonfüred</p>
+
+                        </li>
+                        <li>
+                            <h4>Karolina kávéház</h4>
+                            <p><strong>2025. július 31.</strong></p>
+                            <p>Karolina kávéház, Balatonfüred</p>
+                        </li>
+                        <!--
+                        <li>
+                            <h4>Debreceni Klasszikus Est</h4>
+                            <p><strong>2025. október 3. – 20:00</strong></p>
+                            <p>Kölcsey Központ, Debrecen</p>
+                            <p>Harmonika és kamarazene varázslatos találkozása.</p>
+                        </li>
+                        -->
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="hangjegyes-elvalaszto">
+            <span class="violinkulcs">&#119070;</span>
+        </div>
+
+        <div class="row">
+            <section id="hirlevel" class="hirlevel-section">
+                <div class="hirlevel-box">
+                    <form
+                        action="https://gmail.us14.list-manage.com/subscribe/post-json?u=1ad1897a0b3bba3af40ca4879&id=eebd0afdc4&c=?"
+                        method="GET" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                        novalidate>
+
+                        <h2>Iratkozzon fel a hírlevélre!</h2>
+                        <p>Értesüljön elsőként az újdonságokról.</p>
+                        <div class="mc-field-group">
+                            <label for="mce-EMAIL">Email címe <span>*</span></label>
+                            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
+                        </div>
+
+                        <div class="button-area">
+                            <input type="submit" value="Feliratkozom" name="subscribe" id="mc-embedded-subscribe"
+                                class="hirlevel-button">
+                        </div>
+
+                        <div id="mc-response-message" class="response-area"></div>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <div class="row kapcsolat" id="kapcsolat">
+            <section id="kapcsolat" class="kapcsolat-szekcio">
+                <div class="kapcsolat-wrapper"><!-- központosító burok -->
+                    <h3>Kapcsolat</h3>
+
+                    <div class="kapcsolat-tartalom">
+                        <p><i class="fas fa-phone kapcsolat-ikon"></i><a href="tel:+36203585638">+36 20 358 5638</a></p>
+                        <p><i class="fab fa-facebook-f kapcsolat-ikon"></i><a target="_blank"
+                                href="https://facebook.com/dominika.borsos">facebook.com/dominika.borsos</a></p>
+                        <p><i class="fab fa-instagram kapcsolat-ikon"></i><a target="_blank"
+                                href="https://instagram.com/borsos_dominika_accordionist">@borsos_dominika_accordionist</a>
+                        </p>
+                        <p><i class="fas fa-envelope kapcsolat-ikon"></i><a
+                                href="mailto:dominika.accordionist@gmail.com">dominika.accordionist@gmail.com</a></p>
+
+
+
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+    <footer class="footer-copyright">
+        <p>&copy; 2025 Borsos Dominika | Minden jog fenntartva.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById('mc-embedded-subscribe-form');
+            const emailInput = document.getElementById('mce-EMAIL');
+            const messageBox = document.getElementById('mc-response-message');
+
+            function torles() {
+                let timeLeft = 3;
+                const countdown = setInterval(function () {
+                    timeLeft--;
+                    if (timeLeft < 0) {
+                        clearInterval(countdown);
+                        messageBox.innerHTML = "";
+                    }
+                }, 1000);
+            }
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const email = emailInput.value.trim();
+                if (!email) {
+                    messageBox.innerHTML = "<p style='color: #f44336;'>Kérem, adja meg az email címét!</p>";
+                    torles(); // üzenet törlése idővel
+                    return;
+                }
+
+                const url = form.action + '&EMAIL=' + encodeURIComponent(email);
+
+                fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                    .then(res => res.text())
+                    .then(text => {
+                        const data = JSON.parse(text.replace("if (typeof callback === 'function') { callback(", "").replace("); }", ""));
+                        if (data.result === "success") {
+                            messageBox.innerHTML = "<p style='color: #4caf50;'>Sikeres feliratkozás! Köszönjük!</p>";
+                            emailInput.value = '';
+                        } else {
+                            messageBox.innerHTML = `<p style='color: #f44336;'>${data.msg}</p>`;
+                        }
+                        torles(); // üzenet eltüntetése 3 mp múlva
+                    })
+                    .catch(() => {
+                        messageBox.innerHTML = "<p style='color: #4caf50;'>Sikeres feliratkozás! Köszönjük!</p>";
+                        torles();
+                    });
+            });
+        });
+        let z = window.scrollY
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navigaciossav');
+            if (window.scrollY < 35 || window.scrollY == 0) {
+                navbar.classList.add('transparent');
+            } else {
+                navbar.classList.remove('transparent');
+            }
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            hamburger.addEventListener('click', function () {
+                mobileMenu.classList.toggle('show');
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const banner = document.getElementById('cookie-banner');
+            const acceptBtn = document.getElementById('accept-cookies');
+
+            if (!localStorage.getItem('cookieAccepted')) {
+                banner.style.display = 'flex';
+            }
+
+            acceptBtn.addEventListener('click', () => {
+                localStorage.setItem('cookieAccepted', 'true');
+                banner.style.display = 'none';
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const submenuToggles = document.querySelectorAll('.submenu-toggle');
+
+            submenuToggles.forEach(btn => {
+                btn.addEventListener('click', () => {
+
+                    // aktuális <li> elem
+                    const parentLi = btn.parentElement;
+
+                    // almenü (<ul>) közvetlenül a gomb után
+                    const submenu = parentLi.querySelector('.submenu');
+
+                    // Bezárjuk a többi nyitott almenüt, hogy egyszerre csak egy legyen nyitva
+                    document.querySelectorAll('.mobile-menu .has-submenu').forEach(li => {
+                        if (li !== parentLi) {
+                            li.classList.remove('open');
+                            li.querySelector('.submenu').classList.remove('show');
+                        }
+                    });
+
+                    // Aktuális almenü váltása
+                    submenu.classList.toggle('show');
+                    parentLi.classList.toggle('open');
+                });
+            });
+        });
+
+
+
+
+    </script>
+    <div id="cookie-banner" class="cookie-banner">
+        <p>
+            Ez a weboldal sütiket használ a jobb felhasználói élmény érdekében.
+            <a href="./html/adatkezeles.html">Adatkezelési tájékoztató</a>
+        </p>
+        <button id="accept-cookies">Elfogadom</button>
+    </div>
+
+</body>
+
+</html>
