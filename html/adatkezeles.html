@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adatkezelési tájékoztató</title>
+  <link rel="icon" href="../img/logo_nevnelkul.png">
+  <style>
+    body {
+      background-color: #0f0f0f;
+      color: white;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2, h3, h4 {
+      color: rgb(159, 126, 70);
+      margin-top: 2rem;
+    }
+
+    a {
+      color: rgb(159, 126, 70);
+      text-decoration: underline;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    /* Hírlevél doboz */
+    .hirlevel-box {
+      background-color: #0f0f0f;
+      color: white;
+      border: 2px solid rgb(159, 126, 70);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 0 15px rgba(159, 126, 70, 0.2);
+      margin-top: 3rem;
+    }
+
+    .hirlevel-box h2 {
+      text-align: center;
+      font-size: 1.7rem;
+      margin-bottom: 1.5rem;
+      color: rgb(159, 126, 70);
+    }
+
+    .mc-field-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .mc-field-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: rgb(200, 200, 200);
+    }
+
+    .mc-field-group label span {
+      color: rgb(159, 126, 70);
+    }
+
+    .mc-field-group input[type="email"] {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      background-color: #111;
+      color: white;
+      font-size: 1rem;
+    }
+
+    .button-area {
+      display: flex;
+      justify-content: center;
+    }
+
+    .hirlevel-button {
+      background-color: rgb(159, 126, 70);
+      color: black;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .hirlevel-button:hover {
+      background-color: #d1aa61;
+      transform: scale(1.03);
+    }
+
+    .response-area {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .response-area p {
+      margin: 0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<a href="../index.html" class="vissza">Vissza</a>
+  <h2>Adatkezelési tájékoztató</h2>
+
+  <p>Ez a weboldal sütiket használ a felhasználói élmény javítása, valamint statisztikai célok érdekében.</p>
+
+  <h4>1. Milyen sütiket használunk?</h4>
+  <ul>
+    <li><strong>Működéshez szükséges sütik:</strong> alapfunkciókhoz</li>
+    <li><strong>Statisztikai sütik:</strong> pl. Google Analytics</li>
+    <li><strong>Beágyazott tartalmak:</strong> pl. YouTube videók</li>
+  </ul>
+
+  <h4>2. Hogyan történik az adatkezelés?</h4>
+  <p>A sütik nem tartalmaznak személyes adatokat. A látogató hozzájárulása nélkül nem gyűjtünk személyes információt.</p>
+
+  <h4>3. Hírlevél-feliratkozás</h4>
+  <p>A weboldalon lehetősége van hírlevélre feliratkozni. A megadott e-mail cím kizárólag a hírlevél kiküldésére szolgál, harmadik félnek nem adjuk tovább.</p>
+
+  <div class="hirlevel-box">
+    <form action="https://gmail.us14.list-manage.com/subscribe/post-json?u=1ad1897a0b3bba3af40ca4879&id=eebd0afdc4&c=?" 
+          method="GET" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" novalidate>
+      
+      <h2>Iratkozz fel a hírlevélre!</h2>
+
+      <div class="mc-field-group">
+        <label for="mce-EMAIL">Email címed <span>*</span></label>
+        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
+      </div>
+
+      <div class="button-area">
+        <input type="submit" value="Feliratkozom" name="subscribe" id="mc-embedded-subscribe" class="hirlevel-button">
+      </div>
+
+      <div id="mc-response-message" class="response-area"></div>
+    </form>
+  </div>
+
+  <h4>4. Hozzájárulás</h4>
+  <p>A látogató a süti- és adatkezelési tájékoztató elfogadásával hozzájárul az adatkezeléshez.</p>
+
+  <h4>5. Elérhetőség</h4>
+  <p>Amennyiben kérdésed van az adatkezeléssel kapcsolatban, kérjük, vedd fel velünk a kapcsolatot az oldalon megadott elérhetőségek valamelyikén.</p>
+<footer class="footer-copyright">
+        <p>&copy; 2025 Borsos Dominika | Minden jog fenntartva.</p>
+    </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById('mc-embedded-subscribe-form');
+      const emailInput = document.getElementById('mce-EMAIL');
+      const messageBox = document.getElementById('mc-response-message');
+
+      function torles() {
+        let timeLeft = 4;
+        const countdown = setInterval(function () {
+          timeLeft--;
+          if (timeLeft < 0) {
+            clearInterval(countdown);
+            messageBox.innerHTML = "";
+          }
+        }, 1000);
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const email = emailInput.value.trim();
+        if (!email) {
+          messageBox.innerHTML = "<p style='color: #f44336;'>Kérlek, add meg az email címed!</p>";
+          torles();
+          return;
+        }
+
+        const url = form.action + '&EMAIL=' + encodeURIComponent(email);
+
+        fetch(url, {
+          method: 'GET',
+          headers: {
+            'Accept': 'application/json'
+          }
+        })
+          .then(res => res.text())
+          .then(text => {
+            const data = JSON.parse(text.replace("if (typeof callback === 'function') { callback(", "").replace("); }", ""));
+            if (data.result === "success") {
+              messageBox.innerHTML = "<p style='color: #4caf50;'>Sikeres feliratkozás! Köszönjük.</p>";
+              emailInput.value = '';
+            } else {
+              messageBox.innerHTML = `<p style='color: #f44336;'>${data.msg}</p>`;
+            }
+            torles();
+          })
+          .catch(() => {
+            messageBox.innerHTML = "<p style='color: #4caf50;'>Sikeres feliratkozás! Köszönjük.</p>";
+            torles();
+          });
+      });
+    });
+  </script>
+</body>
+</html>
