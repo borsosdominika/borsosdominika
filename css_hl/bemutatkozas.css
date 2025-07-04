@@ -1,0 +1,114 @@
+
+.bemutatkozas-szekcio {
+    background-color: #0f0f0f; /* törtfehér árnyalat */
+    padding: 2rem 2rem 4rem;
+    color: white; /* sötétbarna szöveg */
+    margin-top: 60px;
+    min-height: 300px;
+}
+
+/* Címsor stílus */
+.bemutatkozas-wrapper h3 {
+    color: rgb(159, 126, 70); /* aranybarna */
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    
+    
+}
+
+/* Szöveg */
+.bemutatkozas-tartalom {
+   
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #3e342b; /* kissé melegebb tónus */
+}
+
+
+/* Kép stílus - nem változik, csak margó finomhangolás */
+.bemutatkozas-kep {
+    max-width: 350px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(159,126,70,0.5);
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 2rem;
+}
+
+/* Bekezdések */
+.bemutatkozas-tartalom p {
+    margin: auto 6rem 1rem 6rem;
+    color: white;
+    text-align: justify;
+}
+
+/* Világos háttérhez igazított vízszintes vonal */
+.bemutatkozas-wrapper hr {
+    border: 0;
+    border-top: 1px solid rgba(159, 126, 70, 0.3);
+    margin: 1.5rem 0;
+}
+
+
+body{
+    background-color: black;
+}
+
+@media (max-width: 992px) {
+    .bemutatkozas-tartalom p {
+    margin: auto 3rem 1.5rem 3rem;
+    color: white;
+    text-align: justify;
+    }
+}
+
+
+.hangjegyes-elvalasztoz .violinkulcsz {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0f0f0f;
+    /* hogy kitakarja a vonalat */
+    padding: 0 12px;
+    font-size: 2rem;
+    color: rgb(159, 126, 70);
+    z-index: 1;
+    line-height: 1;
+    user-select: none;
+
+}
+
+.violinkulcsz {
+    font-size: 2rem;
+    color: rgb(159, 126, 70);
+}
+
+.hangjegyes-elvalasztoz {
+    position: relative;
+    width: 60%;
+    height: 2px;
+    background-color: rgb(159, 126, 70);
+    margin: 4rem auto 0rem;
+}
+
+.violinkulcsz {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0f0f0f;
+    /* hogy kitakarja a vonalat */
+    padding: 0 12px;
+    font-size: 2rem;
+    color: rgb(159, 126, 70);
+    z-index: 1;
+    line-height: 1;
+    user-select: none;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 8px rgba(159, 126, 70, 0.7);
+}

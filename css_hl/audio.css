@@ -1,0 +1,118 @@
+.audio-szekcio {
+  background-color: #0f0f0f;
+  padding: 3rem 1rem;
+  
+  
+  color: rgb(159, 126, 70);
+
+  width: 100vw;
+  box-sizing: border-box;
+  overflow-x: auto; /* vízszintes görgetés ha kell */
+  white-space: nowrap; /* hogy egy sorban legyen minden */
+}
+
+.audio-cim {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.audio-underline {
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: rgb(159, 126, 70);
+  margin: 0.5rem auto 1.5rem;
+  border-radius: 2px;
+}
+
+.audio-grid {
+  display: inline-flex; /* inline-flex, hogy a .audio-szekcio-ban ne törjön új sorba */
+  gap: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.audio-wrapper {
+  flex: 0 0 auto; /* ne zsugorodjon, ne nyúljon */
+  border: 2px solid rgb(159, 126, 70);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(159, 126, 70, 0.4);
+  overflow: hidden;
+  width: 320px; /* fix vagy max szélesség az iframe-nek */
+}
+
+.audio-wrapper iframe {
+  display: block;
+  width: 100%;
+  height: 166px; /* az eredeti magasságod */
+  border: none;
+  border-radius: 10px;
+}
+
+/* Mobilon kicsit kisebb, és scroll vízszintesen marad */
+@media (max-width: 768px) {
+  .audio-wrapper {
+    width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .audio-wrapper {
+    width: 240px;
+  }
+}
+
+body{
+    padding-top: 3rem;
+    background-color: #0f0f0f;
+}
+
+.audio-szekcio {
+  background-color: #0f0f0f;
+  padding: 3rem 1rem;
+  
+  
+  color: rgb(159, 126, 70);
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.audio-cim {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.audio-underline {
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: rgb(159, 126, 70);
+  margin: 0.5rem auto 1.5rem;
+  border-radius: 2px;
+}
+
+.audio-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;  /* távolság a hangsávok között */
+  max-width: 900px;
+  margin: 0 auto; /* középre igazítás */
+  padding: 0 1rem;
+}
+
+.audio-wrapper {
+  border: 2px solid rgb(159, 126, 70);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(159, 126, 70, 0.4);
+  overflow: hidden;
+  width: 100%;
+}
+
+.audio-wrapper iframe {
+  width: 100%;
+  height: 166px;
+  border: none;
+  border-radius: 10px;
+}

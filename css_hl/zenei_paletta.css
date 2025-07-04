@@ -1,0 +1,152 @@
+body {
+    background-color: #0f0f0f;
+    padding-top: 5rem;
+    color: white;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.zenei-paletta .palette-item {
+    margin-bottom: 3rem;
+    
+    padding-bottom: 2rem;
+}
+
+.title {
+    color: rgb(159, 126, 70);
+    /* arany */
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.sorkizart {
+    text-align: justify;
+}
+
+.image-wrapper {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.image {
+
+    max-width: 350px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(159, 126, 70, 0.5);
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 2rem;
+
+
+}
+
+.description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 auto 1.5rem;
+    max-width: 750px;
+}
+@media (max-width: 992px) {
+    .description {
+    margin: auto 3rem 2rem 3rem;
+    color: white;
+    text-align: justify;
+    }
+}
+
+.button-wrapper {
+    text-align: center;
+}
+
+
+
+.btn {
+    display: inline-block;
+    font-weight: 600;
+    padding: 0.5rem 1.25rem;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-outline-gold {
+    color: rgb(159, 126, 70);
+    border-color: rgb(159, 126, 70);
+    background-color: transparent;
+}
+
+.btn-outline-gold:hover,
+.btn-outline-gold:focus {
+    background-color: rgb(159, 126, 70);
+    color: #0f0f0f;
+}
+
+.btn-outline-light {
+    color: #fff;
+    border-color: #fff;
+    background-color: transparent;
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus {
+    background-color: #fff;
+    color: #0f0f0f;
+}
+
+.ml-2 {
+    margin-left: 0.5rem;
+}
+
+.hangjegyes-elvalaszto .violinkulcs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0f0f0f;
+    /* hogy kitakarja a vonalat */
+    padding: 0 12px;
+    font-size: 2rem;
+    color: rgb(159, 126, 70);
+    z-index: 1;
+    line-height: 1;
+    user-select: none;
+
+}
+
+.violinkulcs {
+    font-size: 2rem;
+    color: rgb(159, 126, 70);
+}
+
+.hangjegyes-elvalaszto {
+    position: relative;
+    width: 60%;
+    height: 2px;
+    background-color: rgb(159, 126, 70);
+    margin: 4rem auto;
+}
+
+.violinkulcs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0f0f0f;
+    /* hogy kitakarja a vonalat */
+    padding: 0 12px;
+    font-size: 2rem;
+    color: rgb(159, 126, 70);
+    z-index: 1;
+    line-height: 1;
+    user-select: none;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 8px rgba(159, 126, 70, 0.7);
+}

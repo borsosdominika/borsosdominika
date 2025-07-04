@@ -1,0 +1,114 @@
+
+
+.galeria-szekcio{
+    padding-top: 5rem;
+   
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.galeria-kep {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border: 2px solid rgb(159, 126, 70);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-kep:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(159, 126, 70, 0.5);
+}
+
+
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.lightbox-kep {
+    max-width: 90%;
+    max-height: 90%;
+    border: 3px solid rgb(159, 126, 70);
+    border-radius: 12px;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 3rem;
+    color: rgb(159, 126, 70);
+    cursor: pointer;
+}
+.galeria-szekcio{
+    background-color: #0f0f0f;
+}
+
+
+
+@media (min-width: 576px) {
+  .galeria-grid {
+    grid-template-columns: repeat(2, 1fr); /* Kisebb tableten 2 oszlop */
+  }
+}
+
+@media (min-width: 768px) {
+  .galeria-grid {
+    grid-template-columns: repeat(3, 1fr); /* Normál tablet/laptop: 3 */
+  }
+}
+
+@media (min-width: 992px) {
+  .galeria-grid {
+    grid-template-columns: repeat(4, 1fr); /* Nagyobb kijelzőn: 4 */
+  }
+}
+
+.fotok-cim .fotok-underline {
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: rgb(159, 126, 70);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.fotok-cim {
+  text-align: center;
+  color: rgb(159, 126, 70);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+body{
+  background-color: #0f0f0f;
+}
+
+.hangjegyes-elvalaszto {
+    position: relative;
+    width: 60%;
+    height: 2px;
+    background-color: rgb(159, 126, 70);  /* ez csak egy vékony vonal! */
+    margin: 4rem auto;
+}
+
+.elvalaszto-szekcio {
+  background-color: #0f0f0f;
+  padding: 0.1rem 0;  /* hogy legyen tér körülötte is */
+}

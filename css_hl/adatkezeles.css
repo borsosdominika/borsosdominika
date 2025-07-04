@@ -1,0 +1,31 @@
+
+.adatkezeles h2, .adatkezeles h4 {
+    color: rgb(159, 126, 70);
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+.adatkezeles a {
+    color: rgb(159, 126, 70);
+    text-decoration: underline;
+}
+
+.vissza {
+    background-color: transparent;
+    color: rgb(159, 126, 70);
+    border: 2px solid rgb(159, 126, 70);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin: auto;
+}
+
+.vissza:hover {
+    background-color: rgb(159, 126, 70);
+    color: #1a1a1a;
+    box-shadow: 0 0 10px rgba(159, 126, 70, 0.5);
+}

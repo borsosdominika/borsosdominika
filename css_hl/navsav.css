@@ -1,0 +1,498 @@
+/*NAV SÁV*/
+
+.navigaciossav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(15, 15, 15, 1);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0 24px;
+    position: relative;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Dropdown menü */
+.nav-right .dropdown {
+    position: relative;
+}
+
+.nav-right .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgba(15, 15, 15, 0.95);
+    min-width: 180px;
+    border: 1px solid rgb(159, 126, 70);
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.nav-right .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-right .dropdown-menu li {
+    display: block;
+    padding: 0;
+}
+
+.nav-right .dropdown-menu a {
+    display: block;
+    padding: 10px 16px;
+    color: rgb(159, 126, 70);
+    font-weight: normal;
+    background-color: transparent;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-right .dropdown-menu a:hover {
+    background-color: rgba(159, 126, 70, 0.1);
+    color: #d1aa61;
+}
+
+
+.logo-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo {
+    height: 40px;
+}
+
+.nav-left li,
+.nav-right li,
+.mobile-menu li {
+    list-style: none;
+}
+
+.nav-left a,
+.nav-right a,
+.mobile-menu a {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(159, 126, 70);
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 1100;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    display: block;
+}
+
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: rgba(15, 15, 15, 0.95);
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.mobile-menu li+li {
+    border-top: 1px solid #444;
+}
+
+/* ----- MOBIL ALMENÜK ----- */
+.mobile-menu .has-submenu {
+    width: 100%;
+}
+
+/* Gomb, ami lenyitja az almenüt – úgy néz ki, mint a sima link */
+.mobile-menu .submenu-toggle {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    background: transparent;
+    border: none;
+    font: inherit;
+    color: rgb(159, 126, 70);
+    font-weight: bolder;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Kis nyíl ikon (CSS-szel rajzolva) */
+.mobile-menu .submenu-toggle::after {
+    content: "";
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-50%) rotate(45deg);
+    transition: transform .25s;
+}
+
+/* Nyíl lefelé nyitott állapotban */
+.mobile-menu .submenu.show+.submenu-toggle::after,
+.mobile-menu .has-submenu.open>.submenu-toggle::after {
+    transform: translateY(-50%) rotate(225deg);
+}
+
+/* Almenü lista */
+.mobile-menu .submenu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(15, 15, 15, 0.9);
+}
+
+.mobile-menu .submenu.show {
+    display: flex;
+}
+
+/* Linkek az almenüben */
+.mobile-menu .submenu a {
+    padding: 10px 32px;
+    /* beljebb húzva */
+    font-weight: normal;
+    border-top: 1px solid #444;
+}
+
+
+
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .mobile-menu.show {
+        display: flex;
+    }
+
+    .logo-center {
+        position: static;
+        transform: none;
+    }
+
+    .nav-container {
+        justify-content: space-between;
+    }
+
+
+}
+
+
+.nav-left a::before,
+.nav-left a::after,
+.nav-right a::before,
+.nav-right a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 50%;
+    background: currentColor;
+    transform: scaleX(0);
+    transition: transform .4s ease;
+}
+
+.nav-left a::before,
+.nav-right a::before {
+    left: 0;
+    transform-origin: left;
+}
+
+.nav-left a::after,
+.nav-right a::after {
+    right: 0;
+    transform-origin: right;
+}
+
+.transparent {
+    background-color: #ffffff00;
+}
+
+.nav-left a:hover::before,
+.nav-left a:hover::after,
+.nav-right a:hover::before,
+.nav-right a:hover::after {
+    transform: scaleX(1);
+}
+
+.hero-image {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./img/kezdolap_ideig.jpeg');
+    background-size: cover;
+    background-position: center;
+
+}
+
+.hero-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* elmosás */
+    background-color: rgba(0, 0, 0, 0.538);
+    z-index: 1;
+}
+
+.hero-image>* {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+@media (max-width: 768px) {
+
+    /* minden felső szintű <li> ugyanakkora sor */
+    .mobile-menu li {
+        width: 100%;
+    }
+
+    /* a felső szintű hivatkozások és a lenyitó gomb
+     ugyanazt a stílust kapják – itt egységes a magasság is */
+    .mobile-menu li>a,
+    .mobile-menu .submenu-toggle {
+        display: flex;
+        /* szöveg balra, (nyíl) jobbra */
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 52px;
+        /* ⇦ minden sor pontosan ekkora */
+        padding: 0 16px;
+        font-size: 1.05rem;
+        font-weight: bolder;
+        box-sizing: border-box;
+    }
+
+    /* egységes elválasztó vonal a sorok között */
+    .mobile-menu li+li {
+        border-top: 1px solid #444;
+    }
+
+    /* nyíl ikon pozíció-finomítás (lenyíló gombon) */
+    .mobile-menu .submenu-toggle::after {
+        right: 18px;
+        /* szépen igazodik a szélhez */
+    }
+
+    /* az almenü linkjei beljebb kezdődnek, hogy tagolt maradjon */
+    .mobile-menu .submenu a {
+        padding-left: 32px;
+        height: 48px;
+        /* lehet kisebb, hogy elkülönüljön */
+    }
+}
+
+/*NAV SÁV*/
+
+.kapcsolat-ikon {
+    color: rgb(159, 126, 70);
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
+
+/* --- KAPCSOLAT SZEKCIÓ --- */
+/* Külső szekció: csak háttér- és belső térköz */
+.kapcsolat-szekcio {
+    background: #0f0f0f;
+    padding: 4rem 2rem;
+    color: #fff;
+}
+
+/* Központosító burok – Ő lesz max 600 px széles és **mindig középen** */
+.kapcsolat-wrapper {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    /* <- tényleges középre húzás */
+}
+
+/* Címsor */
+.kapcsolat-wrapper h3 {
+    color: rgb(159, 126, 70);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    /* csak a cím középre */
+}
+
+/* Tartalom: balra zárt szöveg */
+.kapcsolat-tartalom {
+    text-align: center;
+
+}
+
+.kapcsolat-tartalom p {
+    font-size: 1.1rem;
+    margin: .8rem 0;
+}
+
+.kapcsolat-tartalom a {
+    color: rgb(159, 126, 70);
+    text-decoration: none;
+    transition: color .3s;
+}
+
+.kapcsolat-tartalom a:hover {
+    color: #d1aa61;
+    text-decoration: underline;
+}
+
+.footer-copyright {
+  background-color: rgb(159, 126, 70);
+  color: #0f0f0f;
+  display: flex;
+  justify-content: center;     /* vízszintes közép */
+  align-items: center;         /* függőleges közép */
+  height: 60px;                /* fix magasság a középre igazításhoz */
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.footer-copyright p {
+  margin: 0; /* Eltávolítja az alapértelmezett margót */
+}
+
+.hangjegyes-elvalaszto .violinkulcs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0f0f0f;
+    /* hogy kitakarja a vonalat */
+    padding: 0 12px;
+    font-size: 2rem;
+    color: rgb(159, 126, 70);
+    z-index: 1;
+    line-height: 1;
+    user-select: none;
+
+}
+
+.violinkulcs {
+    font-size: 2rem;
+    color: rgb(159, 126, 70);
+}
+
+.hangjegyes-elvalaszto {
+    position: relative;
+    width: 60%;
+    height: 2px;
+    background-color: rgb(159, 126, 70);
+    margin: 4rem auto;
+}
+
+.violinkulcs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0f0f0f;
+    /* hogy kitakarja a vonalat */
+    padding: 0 12px;
+    font-size: 2rem;
+    color: rgb(159, 126, 70);
+    z-index: 1;
+    line-height: 1;
+    user-select: none;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 8px rgba(159, 126, 70, 0.7);
+}
+
+
+
+
+
+
+
+
+
+.hangjegyes-elvalasztoz .violinkulcsz {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0f0f0f;
+    /* hogy kitakarja a vonalat */
+    padding: 0 12px;
+    font-size: 2rem;
+    color: rgb(159, 126, 70);
+    z-index: 1;
+    line-height: 1;
+    user-select: none;
+
+}
+
+.violinkulcsz {
+    font-size: 2rem;
+    color: rgb(159, 126, 70);
+}
+
+.hangjegyes-elvalasztoz {
+    position: relative;
+    width: 60%;
+    height: 2px;
+    background-color: rgb(159, 126, 70);
+    margin: 4rem auto;
+}
+
+.violinkulcsz {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0f0f0f;
+    /* hogy kitakarja a vonalat */
+    padding: 0 12px;
+    font-size: 2rem;
+    color: rgb(159, 126, 70);
+    z-index: 1;
+    line-height: 1;
+    user-select: none;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 8px rgba(159, 126, 70, 0.7);
+}
